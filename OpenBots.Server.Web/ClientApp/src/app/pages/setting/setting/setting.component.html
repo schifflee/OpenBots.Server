@@ -1,0 +1,143 @@
+<div class="row">
+    <div class="col-md-12">
+        <nb-card>
+            <nb-card-header>
+                <div class="titleHeader">
+                    <div class="titleLeft">
+                        <div class="LeftBgIcon">
+                            <img class="img-head-logo" src="../../../../assets/icons/Settings.svg" >
+                        </div>
+                        <div class="LeftBgText">
+                          <h2>Settings</h2>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>    
+                    </div>
+                
+                </div>
+
+<!-- <div class="row">
+    <div class="col-md-1 col-lg-1 col-xxxl-2 noRightPadding">
+        <img class="img-head-logo" src="../../../../assets/icons/Settings.svg" >
+    </div>
+   
+      <div class="col-md-7 col-lg-7 col-xxxl-10 noLeftPadding">
+                     
+        <h2>Setting</h2>
+        <p>
+      
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>
+</div> -->
+               
+            </nb-card-header>
+            <nb-card-body>
+
+                <form [formGroup]="settingfrm">
+                    <div class="row">
+                      
+                        <div class="col-md-6 col-lg-6 col-xxxl-6">
+                            <label   class="label">
+                                Smtp Configuration </label>
+                            <input type="input" nbInput fullWidth   class="form-control"
+                                formControlName="smtpConfiguration" />
+                        </div>
+                      
+                        <div class="col-md-6 col-lg-6 col-xxxl-6">
+                            <label   class="label">
+                                Time Zone </label>
+                            <input type="input" nbInput fullWidth   class="form-control"
+                                formControlName="timeZone" />
+                        </div>
+                    </div>
+                    
+                    <div class="row rowPadTOp">
+                        
+                        <div class="col-md-6 col-lg-6 col-xxxl-6">
+                            <label   class="label ">
+                                Storage Location </label>
+                            <input type="input" nbInput fullWidth   class="form-control"
+                                formControlName="storageLocation" />
+                        </div>
+                    </div>
+                    <!-- <ng2-timezone-picker
+    [timezone]="user.timezone"
+    (change)="changeTimezone($event)"
+    placeholder="Select timezone"
+    showOffset="true"
+    guess="true">
+</ng2-timezone-picker> -->
+
+
+ 
+                    <div class="row rowPadTOp" *ngIf="showEditBtn">
+                        <div class="col-md-12 col-lg-12 col-xxxl-6">
+                            <!-- [disabled]="submitted || !settingfrm.valid" -->
+                          <button type="submit" nbButton status="primary" 
+                            (click)="showUpdateBtn()">
+                            Do you want to update 
+                          </button>
+                        </div>
+                      </div>
+                    <div class="row rowPadTOp" *ngIf="editBtn">
+                        <div class="col-md-12 col-lg-12 col-xxxl-6">
+                            <!-- [disabled]="submitted || !settingfrm.valid" -->
+                          <button type="submit" nbButton status="primary" 
+                            (click)="onSubmit()">
+                            update now 
+                          </button>
+                        </div>
+                      </div>
+
+                    <!-- <div class="row rowPadTOp">
+                        <div class="col-md-6 col-lg-6 col-xxxl-6">
+                            <label class="label">Version</label>
+                            <input type="input" nbInput fullWidth  formControlName="version"
+                            class="form-control" placeholder="Please enter Version" />
+                            <div *ngIf="f.version.touched && f.version.invalid" class="invalid-feedback-frm">
+                                <div *ngIf="f.version.errors && f.version.errors.required">
+                                    Version is required.
+                                </div>
+                                <div *ngIf="f.version.errors.minlength">
+                                    Version at least 1 characters long.
+                                </div>
+                                <div *ngIf="f.version.errors.maxlength">
+                                    Version at least 100 characters long.
+                                </div>
+                                <div *ngIf="f.version.errors.pattern">Enter only number.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-6 col-xxxl-6">
+                            <label class="label">Upload Process File</label>
+                            <label class="upload-button">
+                                <input type="file" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple>
+                                 
+                              </label>
+                              <div *ngIf="show_upload" class="invalid-feedback-frm">
+                                Please Upload Process File 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row rowPadTOp">
+                        <div class="col-md-12 col-lg-12 col-xxxl-6">
+                          <button type="submit" nbButton status="primary" [disabled]="submitted || !showprocess.valid"
+                            (click)="onSubmit()">
+                            Save
+                          </button>
+                        </div>
+                      </div> -->
+               
+                    </form>
+            </nb-card-body>
+        </nb-card>
+
+
+    </div>
+</div>
+
+
+ 
